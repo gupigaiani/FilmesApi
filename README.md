@@ -205,7 +205,7 @@ GET /sessao/{filmeId}/{cinemaId}
 
 A API retorna códigos HTTP apropriados para cada situação:
 
-200 OK → Sucesso
-201 Created → Recurso criado
-400 Bad Request → Erro de validação
-404 Not Found → Recurso não encontrado
+- 200 OK → Sucesso
+- 201 Created → Recurso criado
+- 400 Bad Request → Erro de validação
+- 404 Not Found → Recurso não encontrado
