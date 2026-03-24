@@ -15,12 +15,12 @@ O projeto utiliza Entity Framework Core com MySQL, seguindo boas práticas de ar
 
 ## 🛠 Tecnologias
 
-- Backend: .NET 10
-- Banco de dados: MySQL
-- ORM: Entity Framework Core
-- Mapeamento: AutoMapper
-- Documentação: Swagger/OpenAPI
-- Serialização: Newtonsoft.Json
+- .NET 10
+- MySQL
+- Entity Framework Core
+- AutoMapper
+- Swagger/OpenAPI
+- Newtonsoft.Json
 
 ## 📁 Estrutura do Projeto
 
@@ -52,6 +52,7 @@ Configure a connection string no appsettings.Development.json (ou appsettings.js
 
 Crie e atualize o banco de dados:
 ```
+dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
 
@@ -199,3 +200,12 @@ Obter sessão por IDs:
 ```
 GET /sessao/{filmeId}/{cinemaId}
 ```
+
+## ⚠️ Tratamento de Erros
+
+A API retorna códigos HTTP apropriados para cada situação:
+
+200 OK → Sucesso
+201 Created → Recurso criado
+400 Bad Request → Erro de validação
+404 Not Found → Recurso não encontrado
